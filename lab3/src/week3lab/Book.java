@@ -46,6 +46,7 @@ public class Book {
 		this.price = cents;
 	}
 	
+	@Override
 	public String toString(){
 		String allauths = new String();
 		for(int i = 0; i < authors.length - 1; i++){

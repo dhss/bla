@@ -10,19 +10,19 @@ public class Author {
 		this.lastName = last;
 	}
 	
-	private String getFirstName() {
+	public String getFirstName() {
 		return this.firstName;
 	}
 	
-	private void setFirstName(String first) {
+	public void setFirstName(String first) {
 		this.firstName = first;
 	}
 	
-	private String getLastName() {
+	public String getLastName() {
 		return this.lastName;
 	}
 	
-	private void setLastName(String last) {
+	public void setLastName(String last) {
 		this.lastName = last;
 	}
 	

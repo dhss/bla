@@ -83,10 +83,24 @@ public class BinaryTree {
         if (curr == null) {
             return null;
         } else {
-            return null;
+            if (curr.value == parentValue) {
+            	return curr;
+            } else {
+            	// set up new node to hold output
+            	BinaryNode someNode;
+            	
+            	// search left recursively
+            	someNode = findParent(curr.left, parentValue);
+            	
+            	// search right recursively, if not found in left
+            	if (someNode == null) {
+            		someNode = findParent(curr.right, parentValue);
+            	}
+            	
+            	return someNode;
+            }
         }
 
-        // TODO: complete this method.
     }
 
     /**
@@ -121,9 +135,14 @@ public class BinaryTree {
      * @return a String representation of this tree
      */
     private String toString(BinaryNode curr) {
-        return null;
-
-        // TODO: complete this method.
+        
+    	if (curr == null) {
+    		return "()";
+    	} else {
+    		// recursively concatenates left and right subtrees to current string
+    		return "(" + curr.value + " " + toString(curr.left) + " " + toString(curr.right) + ")";
+    	}
+    
     }
 
     public static void main(String[] args) {
